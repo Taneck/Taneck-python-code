@@ -67,28 +67,85 @@ print(scode)
 scode_gbk = s.encode('gbk', errors='replace')  # gbk中文占两个字节
 print(scode_gbk)
 
-s2='✌️'
-scode_ignore=s2.encode('gbk','ignore')
+s2 = '✌️'
+scode_ignore = s2.encode('gbk', 'ignore')
 print(scode_ignore)
-#scode_strict=s2.encode('gbk','strict')  strict会报错
-#print((scode_strict))
-scode_replace=s2.encode('gbk','replace')
+# scode_strict=s2.encode('gbk','strict')  strict会报错
+# print((scode_strict))
+scode_replace = s2.encode('gbk', 'replace')
 print(scode_replace)
 
-print(bytes.decode(scode_gbk,'gbk'))
+print(bytes.decode(scode_gbk, 'gbk'))
 print(scode_gbk.decode('gbk'))
-
 
 print('123'.isdigit())
 print('一二三'.isdigit())
 print('0b1010'.isdigit())
 print('壹'.isdigit())
 print('ⅠⅡⅢⅣ'.isdigit())
-
+print('-' * 50)
 print('123'.isnumeric())
 print('一二三'.isnumeric())
 print('0b1010'.isnumeric())
 print('壹'.isnumeric())
 print('ⅠⅡⅢⅣ'.isnumeric())
+print('-' * 50)
+print('hello你好'.isalpha())
+print('hello你好123'.isalpha())
+print('hello你好一二三'.isalpha())
+print('hello你好ⅠⅡⅢⅣ'.isalpha())
+print('hello你好壹'.isalpha())
+print('-' * 50)
+print('hello你好'.isalnum())
+print('hello你好123'.isalnum())
+print('hello你好一二三'.isalnum())
+print('hello你好ⅠⅡⅢⅣ'.isalnum())
+print('hello你好壹'.isalnum())
+print('-' * 50)
+print('Helloworld'.islower())
+print('helloworld'.islower())
+print('你好'.islower())
+print('你好'.isupper())
+print('hello你好'.islower())
+print('HELLO你好'.isupper())
+print('-' * 50)
+print('Hello'.istitle())
+print('HelloWorld'.istitle())
+print('Helloworld'.istitle())
+print('Hello World'.istitle())
+print('Hello World'.istitle())
+print('-' * 50)
+print('\t'.isspace())
+print(' '.isspace())
+print('\n'.isspace())
+print('-' * 50)
+s1 = 'hello'
+s2 = 'world'
+print(s1 + s2)
+print(''.join(['hello', 'world', 'python']))
+print('你好'.join(['hello', 'world', 'python']))
+print('hello''world')
+print('%s%s' % (s1, s2))
+print(f'{s1}{s2}')
+print('{0}{1}'.format(s1, s2))
+print('-' * 50)
+s = 'helloworldhelloworldhelloworldabcdef'
 
-print('')
+new_s = ('')
+for item in s:
+    if item not in new_s:
+        new_s += item
+print(new_s)
+
+new_s = ''
+for i in range(len(s)):
+    if s[i] not in new_s:
+        new_s += s[i]
+print(new_s)
+
+s = 'helloworldhelloworldhelloworldabcdef'
+new_s = set(s)
+lst = list(new_s)
+print(lst)
+lst.sort(key=s.index)
+print(''.join(lst))

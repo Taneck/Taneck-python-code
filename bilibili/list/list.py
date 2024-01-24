@@ -70,12 +70,12 @@ print(llst)
 llst = [i for i in range(10) if i % 2 == 0]
 print(llst)
 
-llst=[['a',1,3],['wqe','asf',2]]
+llst = [['a', 1, 3], ['wqe', 'asf', 2]]
 print(llst)
 for row in llst:
     for item in row:
-        print(item,end='\t')
+        print(item, end='\t')
     print()
 
-llst=[[j for j in range(5)] for i in range (4)]
+llst = [[j for j in range(5)] for i in range(4)]
 print(llst)
