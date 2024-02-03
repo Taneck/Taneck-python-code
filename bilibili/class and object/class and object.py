@@ -201,3 +201,4 @@ doctor1 = Son_doctor('vae', 18, '医科')
 
 stu.show()
 doctor1.show()
+print('-'*50)
